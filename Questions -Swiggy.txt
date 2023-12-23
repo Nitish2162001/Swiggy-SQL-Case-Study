@@ -1,0 +1,29 @@
+1) Find the most popular dish and its order count?
+
+SELECT DishName, OrdersCount
+FROM PopularDishes
+ORDER BY OrdersCount DESC
+LIMIT 1;
+
+2) Find the top city with the highest total order values ?
+
+SELECT City, SUM(TotalOrderValue) AS TotalOrderValue
+FROM Users
+GROUP BY City
+ORDER BY TotalOrderValue DESC
+LIMIT 3;
+
+3) Calculate the average order rate multiplier for all international cuisines ?
+
+SELECT AVG(OrderRateMultiplier) AS AvgOrderRateMultiplier
+FROM InternationalCuisine;
+
+4) Find the Instamart with the highest city rank ?
+
+SELECT *
+FROM Instamart
+ORDER BY CityRank DESC
+
+5)How many orders per second does the Regular Biryani have?
+
+SELECT OrdersPerSecond FROM BiryaniLove WHERE BiryaniType = 'Regular Biryani';
